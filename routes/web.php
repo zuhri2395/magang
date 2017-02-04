@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+//SPT Routes
+Route::get('/spt', 'SptController@index');
+Route::get('/spt/create', 'SptController@create');
