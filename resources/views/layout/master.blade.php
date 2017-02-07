@@ -97,7 +97,22 @@
         </ul>
     </div><!--/.navbar-collapse -->
 
-    @yield('content')
+    <div class="templatemo-content-wrapper">
+        <div class="templatemo-content">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="{{url('/')}}">Dashboard</a>
+                </li>
+                @yield('breadcrumbPath')
+            </ol>
+
+            <h1>
+                <b>@yield('contentHeading')</b>
+            </h1>
+
+            @yield('content')
+        </div>
+    </div>
 
     <!-- Modal -->
     <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\SptModel;
+use App\Spt;
 use Illuminate\Http\Request;
 
 class SptController extends Controller
@@ -14,7 +14,7 @@ class SptController extends Controller
      */
     public function index()
     {
-        $sptData = SptModel::all();
+        $sptData = Spt::all();
 
         return view('spt.index', array(
             'sptData' => $sptData
